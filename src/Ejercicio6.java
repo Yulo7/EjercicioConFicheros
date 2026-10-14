@@ -11,8 +11,8 @@ public class Ejercicio6 {
 
         public static void main(String[] args) {
 
-            try (RandomAccessFile practicas = new RandomAccessFile("practicas.dat", "r");
-                 RandomAccessFile precio = new RandomAccessFile("precio.dat", "rw")) {
+            try (RandomAccessFile practicas = new RandomAccessFile("src/Ficheros/practicas.dat", "r");
+                 RandomAccessFile precio = new RandomAccessFile("src/Ficheros/precio.dat", "rw")) {
 
                 precio.setLength(0);
 

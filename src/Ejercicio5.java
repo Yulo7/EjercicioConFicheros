@@ -15,7 +15,7 @@ public class Ejercicio5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        try (RandomAccessFile fichero = new RandomAccessFile("practicas.dat", "rw")) {
+        try (RandomAccessFile fichero = new RandomAccessFile("src/Ficheros/practicas.dat", "rw")) {
 
             System.out.print("¿Cuántos alumnos quieres guardar? ");
             int cantidad = Integer.parseInt(sc.nextLine().trim());
