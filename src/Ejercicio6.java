@@ -16,7 +16,7 @@ public class Ejercicio6 {
 
                 precio.setLength(0);
 
-                // 1) Leer practicas.dat y escribir precio.dat
+
                 while (practicas.getFilePointer() < practicas.length()) {
                     String nombre = leerCadena(practicas, LONG_NOMBRE);
                     practicas.skipBytes(LONG_APELLIDOS * 2);
@@ -47,7 +47,6 @@ public class Ejercicio6 {
             }
         }
 
-        /** Lee 'longitud' caracteres del fichero y los devuelve sin espacios de relleno. */
         static String leerCadena(RandomAccessFile fichero, int longitud) throws IOException {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < longitud; i++) {

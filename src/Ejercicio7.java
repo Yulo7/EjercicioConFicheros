@@ -16,7 +16,7 @@ public class Ejercicio7 {
             try (RandomAccessFile precio = new RandomAccessFile("precio.dat", "r");
                  RandomAccessFile descuento = new RandomAccessFile("descuento.dat", "rw")) {
 
-                // Pedimos el porcentaje (acepta tanto 10.5 como 10,5)
+
                 System.out.print("Porcentaje de descuento a aplicar: ");
                 double porcentaje = Double.parseDouble(sc.nextLine().trim().replace(',', '.'));
 
@@ -25,11 +25,11 @@ public class Ejercicio7 {
                     return;
                 }
 
-                descuento.setLength(0); // se genera de nuevo cada vez para no duplicar alumnos
+                descuento.setLength(0);
 
-                // 1) Leer precio.dat y escribir descuento.dat
+
                 while (precio.getFilePointer() < precio.length()) {
-                    precio.skipBytes(LONG_NOMBRE * 2); // saltamos el nombre
+                    precio.skipBytes(LONG_NOMBRE * 2);
                     String dni = leerCadena(precio, LONG_DNI);
                     double anterior = precio.readDouble();
 
@@ -40,7 +40,7 @@ public class Ejercicio7 {
                     descuento.writeDouble(conDescuento);
                 }
 
-                // 2) Mostrar el contenido de descuento.dat
+
                 System.out.println("\n=== CONTENIDO DE descuento.dat ===");
                 descuento.seek(0);
 
@@ -60,7 +60,7 @@ public class Ejercicio7 {
             }
         }
 
-        /** Lee 'longitud' caracteres del fichero y los devuelve sin espacios de relleno. */
+
         static String leerCadena(RandomAccessFile fichero, int longitud) throws IOException {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < longitud; i++) {
