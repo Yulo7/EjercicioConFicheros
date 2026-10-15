@@ -3,9 +3,9 @@ import java.io.RandomAccessFile;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 public class Ejercicio3 {
-    // Directorio donde se almacena el fichero (ruta relativa al proyecto)
+
     private static final String RUTA_FICHERO = "src/Ficheros/";
-    // Nombre del fichero de acceso aleatorio
+
     private static final String NOMBRE_FICHERO = "juegos.dat";
         public static void main(String[] args) {
                 int[] Orden = {1, 2, 3, 4};
@@ -13,12 +13,12 @@ public class Ejercicio3 {
                         "Fifa"};
                 int[] edades = {17, 18, 8, 16};
                 String[] clasificaciones = {"Aventura", "Acción", "Sandbox", "Deportes"};
-                // Escribe los registros en el fichero
+
                 try (RandomAccessFile fichero = new RandomAccessFile(RUTA_FICHERO + NOMBRE_FICHERO, "rw")) {
                     for (int i = 0; i < Orden.length; i++) {
-                        //Escribe identificador
+
                         fichero.writeInt(Orden[i]);
-                        //Escribe nombre de tamaño fijo 10 caracteres
+
                         StringBuffer nombre = new
                                 StringBuffer(Nombres[i]);
                         nombre.setLength(10);
