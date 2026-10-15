@@ -10,8 +10,8 @@ public class Ejercicio7 {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
 
-            try (RandomAccessFile precio = new RandomAccessFile("precio.dat", "r");
-                 RandomAccessFile descuento = new RandomAccessFile("descuento.dat", "rw")) {
+            try (RandomAccessFile precio = new RandomAccessFile("src/Ficheros/precio.dat", "r");
+                 RandomAccessFile descuento = new RandomAccessFile("src/Ficheros/descuento.dat", "rw")) {
 
 
                 System.out.print("Porcentaje de descuento a aplicar: ");
