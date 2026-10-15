@@ -3,9 +3,6 @@ import java.io.RandomAccessFile;
 import java.util.Scanner;
 public class Ejercicio7 {
 
-
-
-
         // Estructura de precio.dat (ejercicio anterior)
         static final int LONG_NOMBRE = 10;
         static final int LONG_DNI = 9;
@@ -24,9 +21,7 @@ public class Ejercicio7 {
                     System.out.println("El porcentaje debe estar entre 0 y 100.");
                     return;
                 }
-
                 descuento.setLength(0);
-
 
                 while (precio.getFilePointer() < precio.length()) {
                     precio.skipBytes(LONG_NOMBRE * 2);
